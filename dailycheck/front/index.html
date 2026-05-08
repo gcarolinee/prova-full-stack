@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Check</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+</head>
+<body>
+  <header>
+    <h1>DAILY CHECK</h1>
+    <nav>
+      <a onclick="mostrar('home')">Home</a>
+      <a onclick="mostrar('temperatura')">Temperatura</a>
+      <a onclick="mostrar('tarefas')">Tarefas</a>
+    </nav>
+  </header>
+
+
+  <!-- HOME -->
+  <section id="home" class="pagina">
+    <h2>Suas tarefas</h2>
+    <div id="listagem" class="listagem"></div>
+  </section>
+
+
+  <!-- TEMPERATURA -->
+  <section id="temperatura" class="pagina oculto">
+    <div class="box">
+      <h2>Temperatura</h2>
+      <input type="text" id="cidade" placeholder="Digite uma cidade">
+      <button onclick="buscar()">Buscar</button>
+      <div id="result"></div>
+    </div>
+  </section>
+
+
+  <!-- TAREFAS -->
+  <section id="tarefas" class="pagina oculto">
+    <form class="box">
+      <h2>Nova tarefa</h2>
+      <input type="text" id="nome" placeholder="Nome">
+      <input type="date" id="inicio" placeholder="Data início">
+      <input type="date" id="fim" placeholder="Data fim">
+      <textarea id="desc" placeholder="Descrição"></textarea>
+      <input type="text" id="img" placeholder="URL da imagem">
+      <button>Salvar</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
